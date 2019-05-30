@@ -1,0 +1,79 @@
+void SingleResponse() // First Response
+{
+  Serial.print(StrResponse);
+}
+
+void EchoResponse() // Product name
+{ 
+  Serial.print(ReadedRequest);  
+  Serial.print(StrResponse);
+  
+}
+
+void Response4() // Product ID
+{ 
+  Serial.print(ReadedRequest);  
+  Serial.print("MSCR");
+}
+
+void Response5() // Model Name
+{ 
+  Serial.print(ReadedRequest);  
+  Serial.print("DX");
+}
+
+void Response6() // Get Serial Number
+{ 
+  Serial.print(ReadedRequest);  
+  Serial.print("40937");
+}
+
+void Response7() // Comment string
+{ 
+  Serial.print(ReadedRequest);  
+  Serial.print("Standard+Beta");
+}
+
+void Response8() // Parameter format
+{ 
+  Serial.print(ReadedRequest);  
+  Serial.print("Format DH0.5");
+}
+
+void Response9() // version
+{ 
+  Serial.print(ReadedRequest);  
+  Serial.print("HCI 2.0");
+}
+
+void Response10() // pulses/ rev values for each encoder.
+{ 
+  Serial.print(ReadedRequest);  
+  byte initPort[] = {0x03, 0x3F, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+  0x3F, 0xFF, 0x3F, 0xFF, 0x1F, 0xFF, 0x0F, 0xFF, 0x0F, 0xFF, 0x00, 0x00};
+  Serial.write(initPort, sizeof(initPort));
+}
+
+void Response11() // Extra parameters to compute
+{ 
+  Serial.print(ReadedRequest);  
+  byte initPort[] = {0x24, 0x00, 0x00, 0x3F, 0xF5, 0xFF, 0xF9, 0x3F, 0xE5, 0xC0, 0x02, 0xC0, 
+  0x0C, 0x00, 0x00, 0x03, 0xC0, 0x28, 0x10, 0x02, 0x15, 0xFE, 0x6F, 0x01, 0x8F, 0x20, 0x6C, 
+  0xFC, 0x92, 0xFF, 0xFD, 0x24, 0x1C, 0x01, 0x40, 0xEB, 0x66};
+  Serial.write(initPort, sizeof(initPort));
+}
+
+void Response12() // Extra Extended Physical Parameters
+{ 
+  Serial.print(ReadedRequest); 
+   byte initPort[] = {0x02, 0x00, 0x03};
+  Serial.write(initPort, sizeof(initPort)); 
+}
+
+void Response13() // Encoder count mode
+{ 
+  Serial.print(ReadedRequest); 
+   byte initPort[] = {0xCF, 0x83, 0x00, 0x6C, 0x4F, 0x30, 0x5E, 0x35, 0x54, 0x20, 0x02, 0x18,
+   0x79, 0x41, 0x60};
+  Serial.write(initPort, sizeof(initPort)); 
+}
