@@ -44,7 +44,6 @@ obtained data can be easily used in the incorporated GUI or exported to other so
 
 # - Contact:
 	- Mail: jisazab@eafit.edu.co
-	- Phone: (+57) 3122051930.
 
 # - License:
 	- This is an Open Source project, Any bug, complain or extra idea must be notified via e-mail to the author.
